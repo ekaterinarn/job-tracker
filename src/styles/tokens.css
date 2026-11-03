@@ -1,0 +1,80 @@
+/*
+  Design tokens — the single source of truth for both themes.
+  Primitive values live here; components only use semantic tokens
+  (via Tailwind classes such as bg-surface, text-muted, border-subtle).
+  Keep names in sync with the Figma variables collection.
+*/
+
+:root {
+  /* Typography */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Spacing scale is Tailwind's default 4px grid.
+     Table density: row height 40px (comfortable for scanning dense data). */
+  --row-height: 40px;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Light theme (default) */
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --surface-raised: #ffffff;
+  --surface-hover: #f1f3f6;
+  --border-subtle: #e4e7ec;
+  --border-strong: #cfd4dc;
+
+  --text: #111827;
+  --text-muted: #5b6474;
+  --text-subtle: #7a8394;
+
+  --accent: #3b5bdb;
+  --accent-hover: #3249c0;
+  --accent-soft: #edf1ff;
+  --on-accent: #ffffff;
+  --focus-ring: #3b5bdb;
+
+  /* Status colors — always paired with an icon/label, never color alone */
+  --status-new-bg: #eef2f7;      --status-new-fg: #3d4a5c;
+  --status-applied-bg: #e8efff;  --status-applied-fg: #2d48b8;
+  --status-interview-bg: #fff4dc;--status-interview-fg: #8a5a00;
+  --status-offer-bg: #e3f6ea;    --status-offer-fg: #17693a;
+  --status-rejected-bg: #fdeceb; --status-rejected-fg: #b42318;
+
+  --danger: #b42318;
+  --shadow-panel: 0 12px 32px rgba(17, 24, 39, 0.12);
+  --overlay: rgba(17, 24, 39, 0.32);
+}
+
+/* Dark theme: same semantic names, different values.
+   Shadows are replaced by borders and lighter surfaces — shadows barely read on dark. */
+:root[data-theme='dark'] {
+  --bg: #0f1115;
+  --surface: #161a20;
+  --surface-raised: #1c2129;
+  --surface-hover: #1f252e;
+  --border-subtle: #2a313b;
+  --border-strong: #3a434f;
+
+  --text: #eef1f5;
+  --text-muted: #a3acb9;
+  --text-subtle: #8b95a3;
+
+  --accent: #7c9cff;
+  --accent-hover: #93adff;
+  --accent-soft: #1d2640;
+  --on-accent: #0f1115;
+  --focus-ring: #93adff;
+
+  --status-new-bg: #232a34;      --status-new-fg: #c3cbd6;
+  --status-applied-bg: #1d2640;  --status-applied-fg: #a9bcff;
+  --status-interview-bg: #33280f;--status-interview-fg: #f5c766;
+  --status-offer-bg: #12301f;    --status-offer-fg: #7ad9a0;
+  --status-rejected-bg: #3a1714; --status-rejected-fg: #ff9a8f;
+
+  --danger: #ff9a8f;
+  --shadow-panel: 0 0 0 1px #2a313b;
+  --overlay: rgba(0, 0, 0, 0.5);
+}
