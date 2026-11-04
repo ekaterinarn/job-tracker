@@ -26,6 +26,16 @@ I design data-dense B2B interfaces — CRMs, dashboards, admin panels. This proj
 | --- | --- | --- |
 | ![](docs/mobile.png) | ![](docs/state-empty.png) | ![](docs/state-error.png) |
 
+## How I work with AI agents
+
+Most of the code here was written by Claude Code from my specs; I designed it, set the rules and reviewed every change.
+The agent works inside guardrails I wrote for it:
+
+- [`CLAUDE.md`](CLAUDE.md) — design-system rules the agent follows on every task: tokens only, all states, accessibility, copy, workflow.
+- [`.claude/skills/new-component`](.claude/skills/new-component/SKILL.md) — a repeatable procedure for building components.
+- [`docs/specs/add-vacancy.md`](docs/specs/add-vacancy.md) — an example spec for the next feature: states, edge cases, error copy, acceptance criteria.
+- [`docs/ai-workflow.md`](docs/ai-workflow.md) — the full loop, how I review agent output and where AI tends to make things up.
+
 ## Stack
 
 React 19 · TypeScript · Vite · Tailwind CSS v4
